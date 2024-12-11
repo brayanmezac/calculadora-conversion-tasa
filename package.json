@@ -1,0 +1,14 @@
+{
+  "name": "calculadora-conversion-tasa",
+  "version": "1.0.0",
+  "description": "calculadora de convercion de tasa",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "brayanmezac",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
