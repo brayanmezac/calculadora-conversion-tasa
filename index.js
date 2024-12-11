@@ -59,9 +59,7 @@ app.use(express.static('public'));
 
 // Instancia del calculador
 const calculator = new InterestRateCalculator();
-app.get('/', (req, res) => {
-    res.send('Bienvenido a la calculadora de conversión de tasa');
-  });
+
 
 // Ruta para calcular tasas de interés
 app.post('/calcular-tasas', (req, res) => {
