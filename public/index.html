@@ -101,7 +101,16 @@
 </head>
 <body>
     <div class="info-container">
-        <h1 onclick="toggleInfo()">¿Qué significa tu tasa de interés?</h1>
+        <h1 onclick="toggleInfo()">¿Qué significa tu tasa de interés? <span id="collapse-icon">▼</span></h1>
+        <style>
+            #collapse-icon {
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+            #collapse-icon.collapsed {
+                transform: rotate(180deg);
+            }
+        </style>
         <div id="info-content" style="display: none;">
             <h2>¿Es realmente lo que parece?</h2>
             <p>Cuando te dicen que tu crédito tiene un "2% mensual" o una "tasa efectiva anual del 12%", no es tan simple como parece. ¡El interés no funciona de forma lineal!</p>
@@ -138,6 +147,9 @@
         function toggleInfo() {
             const infoContent = document.getElementById('info-content');
             infoContent.style.display = infoContent.style.display === 'none' ? 'block' : 'none';
+            //rotar icon
+            const collapseIcon = document.getElementById('collapse-icon');
+            collapseIcon.classList.toggle('collapsed');
         }
     </script>
     
